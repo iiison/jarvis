@@ -1,4 +1,0 @@
-function a() {
-  console.log('Le BC')
-}
-
