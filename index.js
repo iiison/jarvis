@@ -28,7 +28,7 @@ if (command && command.length > 0) {
   let execute = `${command}${_.capitalize(argv.type)}`
 
   if ( confs[execute].constructor === Function ) {
-    confs[execute]()
+    confs[execute](argv)
   } else {
     console.log(chalk.red(`\n \n Command not found!`))
   }
