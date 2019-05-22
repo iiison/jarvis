@@ -1,14 +1,15 @@
 const figlet = require('figlet')
 const chalk  = require('chalk')
 const clear  = require('clear')
+const path   = require('path')
 const _      = require('lodash')
 
 process.custom = {
-  baseDir : process.argv[1].slice(0, process.argv[1].lastIndexOf('/'))
+  baseDir : process.argv[1].slice(0, process.argv[1].lastIndexOf('/')),
+  rootDir : path.resolve(__dirname)
 }
 
 const confs  = require('./bin/commands-conf');
-
 const argv   = require('minimist')(process.argv.slice(2))
 
 clear()
